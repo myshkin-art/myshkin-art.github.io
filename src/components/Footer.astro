@@ -1,0 +1,20 @@
+---
+import { PERSONAL_INFO,  } from '../consts';
+
+
+const year = new Date().getFullYear();
+---
+
+  <div class="mb-4 mt-12 flex flex-col items-center gap-4">
+
+    <div class="text-center text-sm text-muted">
+      © {year} {PERSONAL_INFO.name}
+    </div>
+  </div>
+
+<style>
+  @reference "../styles/global.css";
+  a {
+    @apply text-muted transition-colors hover:text-accent active:text-accent;
+  }
+</style>

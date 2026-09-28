@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PERSONAL_INFO } from '../consts';
+
+const { name, avatar, contact, contactLabel } = PERSONAL_INFO;
+
+const title = `${name} - About`;
+---
+
+<Layout title={title}>
+  <div class="flex flex-col items-center align-middle about-container">
+    <div class="mx-4 w-fit rounded-xl py-4 sm:py-8">
+      <div class="max-w-screen-lg px-4 md:px-8">
+        <div class="grid about-container items-center gap-8 sm:grid-cols-2">
+          <div
+            class="flex flex-col items-center justify-center py-8 sm:items-start sm:py-24"
+          >
+            <div class="bio" class="mb-8 text-center text-muted sm:text-left md:text-lg">
+              <p>My name is Mars and I am an aspiring tattoo artist.</p>
+
+<p>I went to college for graphic design but physical art has always come much more naturally to me, and being a tattoo artist has been a long held aspiration of mine.</p>
+
+<p>I have watched the way that tattoo artistry has evolved so much during my lifetime; seeing the way artists have pushed the boundaries in so many different ways and stretched the definition and public perception of what is considered to be 'tattoo art' has been so exciting for me to witness. I want nothing more than the opportunity to surround myself with other creative individuals that are just as driven as myself to create and develop as artists.</p>
+
+<p>Influences: <br>
+In grade school, my biggest inspirations as an artist were <a href="https://www.jamesjean.com" target="_blank">James Jean</a> and <a href="https://www.moonassi.com">Moonassi</a>; I believe their strong influence over me during my formative years is still apparent in my work at present. James Jean's surrealist art that has so much movement within is always a source of inspiration. Moonassi's pure black and white art implanted in me a deep love for black and white art. As far as influential tattoo artists, I have a strong affection for <a href="https://www.gossamerrozen.net">Gossamer Rozen's</a> use of blank space and the roundness of their designs. Other notable mentions are <a href="https://www.instagram.com/naoooorinrin/">naoooorinrin</a>, <a href="https://www.instagram.com/qing_yiii/?hl=en">qingyiii</a>, and <a href="https://www.instagram.com/14mountain/?hl=en">Shin-ichi Sakamoto</a>.</p>
+
+<p>In October of 2025 I decided to take a year to try to develop my personal style further as an artist, and as October of 2026 draws near, I am now officially seeking an apprenticeship as a tattoo artist. I appreciate your consideration as well as taking the time to view my portfolio. </p>
+            </div>
+            <a
+              href={contact}
+              class="email-button inline-block rounded-lg border border-accent bg-ink px-8 py-3 text-center text-sm font-semibold text-paper outline-none transition duration-100 hover:bg-accent hover:text-on-accent focus-visible:ring focus-visible:ring-focus md:text-base"
+              >{contactLabel}</a
+            >
+          </div>
+
+          <div
+            class="relative mx-auto h-fit max-w-xs overflow-hidden rounded-full bg-paper-2 object-cover object-center shadow-lg sm:max-w-md"
+          >
+            <img
+              src={avatar}
+              alt={`Portrait of ${name}`}
+              height="600"
+              width="600"
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

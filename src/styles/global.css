@@ -184,3 +184,21 @@ a.email-button:hover {
 .about-container {
   grid-template-columns: 2fr 1fr;
 }
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Bitcount Single';
+  font-size: 24px;;
+}
+
+.contact-container div {
+  margin-bottom: 12px;
+}
+
+div.contact-container a:hover {
+  color: lightgrey;
+}
+
+.footer-container {
+  font-family: 'Bitcount Single';
+}

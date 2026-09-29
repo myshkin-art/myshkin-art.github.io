@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PERSONAL_INFO } from '../consts';
+
+const { name, email, phone, contact, insta, instaUrl } = PERSONAL_INFO;
+
+const title = `${name} - Contact`;
+---
+
+
+<Layout title={title}>
+    <div class="flex flex-col items-center align-middle about-container">
+        <div class="contact-container">
+            <div>Email</div><div style="text-transform: none;"><a href={contact}>{email}</a></div>
+            <div>Phone</div><div>{phone}</div>
+            <div>Instagram</div><div><a href={instaUrl}>{insta}</a></div>
+        </div>
+    </div>
+</Layout>

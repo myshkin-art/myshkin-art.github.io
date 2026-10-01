@@ -62,6 +62,21 @@
   --color-accent: white;
   --color-focus: white;
   --color-on-accent: white;
+
+  --cool-color: rgb(99,213,77);
+}
+
+*::selection {
+  background: var(--cool-color);
+  color: black;
+}
+*::-moz-selection {
+  background: var(--cool-color);
+  color: black;
+}
+*::-webkit-selection {
+  background: var(--cool-color);
+  color: black;
 }
 
 /* Dark — same hue, lifted surfaces, softer accent chroma */
@@ -169,7 +184,7 @@ div.bio, .email-button {
   font-family: 'Bitcount Single';
 }
 div.bio a {
-  color: rgb(99,213,77);
+  color: var(--cool-color);
 }
 
 div.bio p {
